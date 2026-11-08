@@ -1,0 +1,1 @@
+{% if request.args.get('embedded') == '1' %}{% include 'assistant_content.html' %}{% else %}{% include 'index.html' %}{% endif %}

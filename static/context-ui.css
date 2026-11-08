@@ -1,0 +1,137 @@
+/* Context-led refinement. Existing dashboard grid, joined surface and notch remain. */
+:root{--context-tint:#f3f7ff;--context-border:#e4ecfa;--context-shadow:0 6px 20px rgba(38,79,140,.06);--context-radius:18px}
+body:not(.embedded-chat){background:linear-gradient(160deg,#f5f8fd,#edf3fc 70%,#f5f8fd)}
+body:not(.embedded-chat)>header{padding-top:22px;padding-bottom:22px}
+.brand .logo{width:42px;height:42px;padding:9px;border:1px solid #edf2fa;border-radius:14px;background:linear-gradient(145deg,#fff,#edf4ff);box-shadow:0 3px 8px #264f8c06}
+.brand .logo svg{width:100%;height:100%}.brand small{letter-spacing:1.2px;font-size:11px;text-transform:uppercase;color:var(--color-text-secondary)}
+.header-actions{gap:12px}.header-actions .page-switch{border-radius:999px;padding:12px 18px;box-shadow:0 5px 14px #659bea24}.header-actions .page-back{box-shadow:var(--context-shadow)}
+.city-toggle,#profile-toggle{background:#ffffffdf;box-shadow:0 3px 10px #264f8c06;border:1px solid #fff}.city-toggle{font-weight:500}
+.forecast-brief{display:flex;position:relative;align-items:center;gap:12px;padding:14px 16px;margin:0 0 24px;border:1px solid #fff;border-radius:20px;background:linear-gradient(110deg,#ffffffed,#edf4ffdc);box-shadow:0 4px 16px #264f8c04;flex-wrap:wrap}
+.brief-mark{display:grid;place-items:center;flex:none;width:32px;height:32px;border-radius:12px;background:#e2ecff;color:var(--color-primary)}
+.forecast-brief>p{flex:1;min-width:160px;font-size:13px;line-height:23px}.forecast-brief strong{font-weight:550;color:var(--color-primary-ink)}
+.brief-kind{font-size:11px;color:var(--color-text-secondary);white-space:nowrap}#brief-evidence-toggle{background:transparent;color:var(--color-primary);padding:6px;font-size:12px}#brief-evidence{flex:0 0 100%;padding:10px 12px;background:#fff8;border-radius:10px;color:var(--color-text-secondary);font-size:12px;line-height:20px}
+.trend .tabs{padding:4px;border:0;border-radius:999px;background:#f0f4fc;box-shadow:none;gap:2px}.trend .tabs button{padding:7px 16px;border:0;border-radius:999px;background:transparent;box-shadow:none;font-weight:500;color:#7184a1}.trend .tabs button.active{color:var(--color-text);background:white;box-shadow:0 2px 6px #264f8c13}.trend .tabs button:hover{color:var(--color-primary)}
+/* AQI: compact reading, calm advice, continuously visible source. */
+.air-panel .air-body{align-items:flex-start;gap:20px}.air-reading{flex:0 1 148px}.air-panel .aq-meter{aspect-ratio:1.15;max-width:148px}.air-panel .aq-meter #air-value{top:30%;font-size:36px;line-height:44px;font-weight:700;letter-spacing:-1.4px}.air-panel .aq-grade{bottom:30px;font-size:11px;background:transparent;padding:0;line-height:16px}.air-panel .aq-segment{stroke-width:9;stroke-linecap:butt}.air-panel .aq-marker{stroke:#435c7f;stroke-width:1.6}.air-panel .aq-scale{font-size:7px;fill:#8b9cb5}
+.air-reading #air-detail{font-size:12px;margin-top:6px;color:var(--color-text);font-weight:550}.air-reading .data-note{font-size:11px;color:var(--color-text-secondary);margin-top:4px}
+.air-panel .aq-meter #air-value{position:absolute;left:50%;top:43%;transform:translate(-50%,-50%);margin:0;padding:0}.air-panel .aq-grade{top:62%;bottom:auto}
+.air-context{gap:12px}.air-context .air-advice,.air-context .air-advice[data-level]{padding:0;background:transparent;border:0;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none;min-height:0}
+.air-context .air-advice svg{display:none}.air-context .air-advice strong{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:5px 10px;font-size:12px;line-height:18px;background:#ebf7f0;color:#3f8067}.air-context .air-advice strong:before{content:'';width:5px;height:5px;background:currentColor;border-radius:50%;flex:none}.air-context .air-advice[data-level=moderate] strong{background:#fff5df;color:#98731f}.air-context .air-advice[data-level=unhealthy] strong{background:#ffedf0;color:#a74757}
+.air-context .air-advice p{font-size:13px;line-height:23px;margin-top:10px;color:#7386a2}.air-context .data-explanation{padding-top:10px;border-top:1px solid #eef2f8;font-size:11px;line-height:19px}.air-context .data-explanation h3{font-size:11px}.air-context .data-explanation p{margin-top:3px}
+/* Hourly rows keep the first six readings, with exact date on rollover. */
+.hourly-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}.hourly-heading h2{margin:0!important}#expand-hours{padding:4px 0;background:transparent;font-size:12px;line-height:18px;color:var(--color-primary);flex:none}
+.hourly-labels{display:flex;justify-content:space-between;color:#92a3ba;font-size:11px;line-height:18px;padding:0 10px 5px}
+.hourly-panel .hour{grid-template-columns:minmax(60px,1fr) 28px minmax(45px,.9fr) minmax(76px,.9fr);gap:8px;padding:7px 10px;border:0;border-radius:12px;min-height:41px}
+.hourly-panel .hour.next-hour{background:#f1f6ff;box-shadow:inset 2px 0 0 var(--color-primary)}.hourly-panel .next-hour .hour-time>span{color:var(--color-primary);font-weight:650}.hour-time{display:flex;align-items:center;gap:7px;flex-wrap:wrap}.hour-time small{font-size:10px;color:#93a4bb}.hourly-panel .hour strong{font-size:15px;line-height:24px}.hourly-panel .hour .weather-icon{width:25px;height:25px}.hourly-panel details{margin-top:0}.hourly-panel details>summary{display:none}
+.rain-reading{display:inline-flex;justify-content:flex-end;align-items:center;gap:7px;min-width:0;font-size:11px;color:#8b9cb5;white-space:nowrap}.rain-track{position:relative;display:block;width:30px;height:5px;flex:none;background:#eaf0fa;border-radius:99px;overflow:hidden}.rain-fill{height:100%;display:block;border-radius:inherit;background:linear-gradient(90deg,#8eb2ff,#386bff)}.hour .rain-reading>span:last-child{min-width:30px;text-align:right}
+.week-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:flex-end}.week-actions>span{font-size:11px;color:#95a5bc}#ask-week{background:transparent;font-size:12px;color:var(--color-primary);padding:5px 0}.daily{gap:0}.day{border-radius:18px;padding:14px 10px;position:relative}.day+.day:not(.today){border-left:1px solid #f1f4fa}.day.today{border-color:#d9e6ff;background:linear-gradient(145deg,#f2f7ff,#e8f1ff);box-shadow:none}.day.today:after{display:none}.day>.rain-reading{margin-top:9px;justify-content:center}.day .temperature-track{height:6px;margin:16px 2px 10px;background:#edf3fc;overflow:visible}.day .temperature-fill{background:linear-gradient(90deg,#accaff,#386bff);box-shadow:0 2px 5px #659bea1c}.day>strong:last-of-type{font-size:15px}.day .change-note{font-size:10px;line-height:18px;min-height:20px;border-radius:99px;padding:1px 8px}.day p{font-size:11px}
+/* Floating chat: contextual header + real-data capsule, prompts remain above form. */
+#assistant{width:410px;height:560px;gap:10px;padding:18px;border-color:#e5edfa;background:#fffffffa;box-shadow:0 14px 50px #264f8c20;border-radius:24px}#assistant .assistant-heading{align-items:flex-start}.assistant-heading h2{font-size:18px}#compact-context-status{font-size:11px;line-height:18px;color:#8b9cb5;margin:3px 0 0 16px}#close-assistant{width:30px;height:30px;font-size:24px;background:#f1f5fc;font-weight:300}
+.weather-capsule{display:flex;align-items:center;gap:7px;padding:11px 12px;min-width:0;background:linear-gradient(100deg,#f0f6ff,#f8fbff);border:1px solid #e2ecff;border-radius:16px;color:var(--color-text);font-size:12px;line-height:20px;flex-wrap:wrap}.weather-capsule strong{font-weight:650}.capsule-pin{width:16px;height:18px;flex:none;color:#7797c7}.capsule-pin svg{width:16px;height:18px;fill:none;stroke:currentColor;stroke-width:1.6}.weather-capsule small{margin-left:auto;color:#92a5c1;font-size:11px}.capsule-rain{color:#647ea6}.compact-source{font-size:10px;line-height:16px;color:#92a5c1;margin:0 4px}#expand-conversation{background:transparent;padding:3px;font-size:11px;color:#8b9fbc;align-self:center}#expand-conversation:hover{color:var(--color-primary)}#expand-conversation span{margin-left:5px}
+#conversation{padding:0;flex:1}.reply{padding:14px 15px;background:#edf3ff;border-radius:20px 20px 20px 6px;font-size:14px;line-height:24px;margin:6px 0}.user-question{border-radius:16px 16px 4px 16px;background:#e4edff;color:#34567f;font-size:13px}.quick-questions{gap:5px}.quick-questions button{border-radius:999px;padding:7px 10px;color:#58749e;border-color:#e2eafb;font-size:11px}#ask-form .searchbox{background:#f5f8fe;border-color:#e5edfb;border-radius:17px;padding:5px;gap:9px}#ask-form .searchbox input{padding:9px 7px;font-size:13px}#ask-form .searchbox button{border-radius:13px;box-shadow:0 3px 8px #659bea24}
+/* Full assistant: lightly tinted workspace, stronger context in its sidebar. */
+.embedded-chat{background:#f9fbff}.embedded-chat>header{background:#fbfdff;border-bottom-color:#edf2fa;padding:12px 22px}.embedded-chat #clear,.embedded-chat #open-settings{border-radius:50%;height:36px;width:36px;display:grid;place-items:center;padding:8px;color:#7994ba;background:white;box-shadow:var(--context-shadow)}.embedded-chat #clear svg,.embedded-chat #open-settings svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}.embedded-chat #history-panel{width:264px;padding:20px 16px 16px;background:linear-gradient(155deg,#fbfdff,#f3f7fc);gap:16px}.embedded-chat .history-heading{display:none}.sidebar-weather{padding:16px;border:1px solid white;border-radius:20px;background:linear-gradient(130deg,#e8f0ff,#f8fbff);box-shadow:0 6px 18px #264f8c07}.sidebar-weather-title{display:flex;gap:10px;justify-content:space-between;align-items:center;font-size:12px;color:#6681a6}.sidebar-weather-title svg{width:23px;height:23px;fill:#e9f3ff;stroke:#80a8e7;stroke-width:1.5}.sidebar-weather>strong{display:block;font-size:32px;font-weight:700;line-height:46px;letter-spacing:-1px;color:#193354}.sidebar-weather>p{font-size:11px;line-height:19px;color:#718aad;margin-top:2px}.sidebar-weather button{background:transparent;color:var(--color-primary);font-size:12px;border-top:1px solid #dce7fb;margin-top:12px;padding:10px 0 0;width:100%;text-align:left}.sidebar-weather button span{float:right}.embedded-chat #new-chat{background:white;text-align:center;border:1px solid #e0e9fa;color:#284466;border-radius:14px;box-shadow:var(--context-shadow);padding:12px;font-size:14px}.history-group{font-size:12px;color:#92a4be;padding:10px 10px 8px}.embedded-chat .history-item{padding:10px;font-size:13px;min-height:40px}.embedded-chat .history-item:before{display:none}.embedded-chat .history-item.selected{background:white;border-color:#fff;box-shadow:0 4px 12px #264f8c08;color:var(--color-primary)}.embedded-chat .history-item small{font-size:11px}
+.embedded-chat .chat-workspace main{background:white}.embedded-chat.welcome-active .chat-workspace main{background:radial-gradient(ellipse at 50% 42%,#f8fbff,transparent 70%),linear-gradient(150deg,#fcfdff,#f2f7ff)}.embedded-chat.welcome-active .chat-workspace main:after,.embedded-chat.welcome-active .chat-workspace main:before{display:none}.embedded-chat .welcome-mark{width:110px;height:94px;animation:none}.embedded-chat .welcome-cloud{fill:#dceaff;stroke:#96bafd}.embedded-chat .welcome-sun{opacity:.65}.embedded-chat #welcome h1{font-size:36px;line-height:48px;margin:12px 0 18px}.embedded-chat #welcome>.welcome-subtitle{display:none}.embedded-chat #welcome-weather{padding:10px 16px;border-radius:999px;background:white;box-shadow:var(--context-shadow);max-width:100%;margin:0 auto 8px}.embedded-chat #welcome-weather .capsule-rain{display:none}.embedded-chat #welcome nav{margin-top:28px}.embedded-chat .prompt-card,.embedded-chat .prompt-card.activity,.embedded-chat .prompt-card.forecast,.embedded-chat .prompt-card.prediction{background:#ffffffed;border:1px solid white;border-radius:20px;box-shadow:var(--context-shadow);padding:18px 14px;gap:12px}.embedded-chat .prompt-icon{border-radius:16px;width:42px;height:42px;box-shadow:none}.embedded-chat .prompt-copy strong{font-size:15px}.embedded-chat .prompt-copy small{font-size:11px;color:#8b9fbc}.embedded-chat .prompt-arrow{width:14px;color:#b9cce5;stroke:currentColor}.embedded-chat .prompt-card:hover{border-color:#dce8ff;transform:translateY(-1px);box-shadow:0 8px 24px #264f8c0c}.embedded-chat .input-wrap,.embedded-chat.welcome-active .input-wrap{background:white;border-color:#e4ecfa;box-shadow:0 8px 24px #264f8c06;backdrop-filter:none;-webkit-backdrop-filter:none}.embedded-chat .composer-note{color:#97abc8}
+@media(max-width:1100px){.embedded-chat #history-panel{width:220px;padding:16px 12px}.embedded-chat #welcome h1{font-size:30px}.embedded-chat .prompt-card{gap:8px}.embedded-chat .prompt-copy small{font-size:10px}.air-panel .air-body{gap:12px}.air-reading{flex-basis:126px}.week-actions{gap:8px}.trend .tabs button{padding:7px 10px}}
+@media(max-width:900px){.week-heading{align-items:flex-start}.week-actions{max-width:220px}.embedded-chat .prompt-card{padding:12px 16px}.embedded-chat .prompt-copy small{font-size:11px}.embedded-chat #welcome h1{font-size:28px;line-height:38px;margin:8px 0 12px}}
+@media(max-width:720px){body:not(.embedded-chat)>header{padding-top:16px;padding-bottom:16px}.forecast-brief{padding:12px;gap:8px;margin-bottom:24px}.forecast-brief>p{font-size:12px;line-height:21px}.brief-kind{margin-left:40px}.brand .logo{width:34px;height:34px;padding:6px;border-radius:11px}.header-actions{gap:7px}.header-actions .page-switch{padding:9px 12px}.week-actions{max-width:190px;gap:4px}.week-actions>span{display:none}.day{min-width:124px}.daily{gap:8px}.hourly-heading{margin-bottom:12px}.air-context .data-explanation{font-size:11px}#assistant{height:min(560px,calc(100dvh - 100px));padding:16px;gap:9px}}
+@media(max-width:600px){.embedded-chat>header{padding:10px 12px;gap:8px}.embedded-chat #history-panel{width:min(280px,86%);padding:16px 12px}.embedded-chat .sidebar-weather{padding:14px}.embedded-chat #welcome h1{font-size:25px;line-height:34px}.embedded-chat #welcome-weather{border-radius:16px;font-size:11px;padding:8px 10px;gap:5px}.embedded-chat #welcome-weather small{display:none}.embedded-chat .welcome-mark{width:84px;height:70px}.embedded-chat #welcome nav{margin-top:18px}.embedded-chat .prompt-card{padding:12px;gap:10px;border-radius:16px}.embedded-chat .prompt-copy strong{font-size:14px}.embedded-chat .prompt-icon{width:36px;height:36px;border-radius:12px}.embedded-chat #clear,.embedded-chat #open-settings{width:32px;height:32px}.embedded-chat .chat-brand strong{font-size:13px}.embedded-chat #agent-mode{max-width:145px}.embedded-chat .brand-mark{display:none}}
+@media(max-width:480px){.air-panel .air-body{gap:14px 12px;align-items:start}.air-context .air-advice strong{font-size:11px}.air-context .air-advice p{font-size:12px;line-height:21px}.air-panel .aq-meter{max-width:140px}.air-panel .aq-meter #air-value{font-size:34px;top:29%}.air-panel .aq-grade{bottom:27px}.hourly-heading{gap:8px}.hourly-heading h2{font-size:17px}#expand-hours{font-size:11px}.hourly-panel .hour{padding:7px;gap:5px;grid-template-columns:minmax(54px,1fr) 24px minmax(42px,.8fr) 72px}.hour-time{gap:4px}.hour-time small{font-size:9px}.hourly-panel .hour strong{font-size:14px}.hourly-panel .hour .weather-icon{width:24px;height:24px}.hourly-panel .rain-reading{gap:5px}.rain-track{width:26px}.week-heading h2{font-size:18px}#ask-week{font-size:10px;max-width:145px;text-align:right}.week-actions{max-width:145px}.weather-capsule{font-size:11px;padding:9px 10px;gap:5px}.weather-capsule small{font-size:10px}.quick-questions{gap:4px}.quick-questions button{font-size:10px;padding:7px 8px}#compact-source{font-size:9px}.forecast-brief .brief-mark{width:28px;height:28px}.forecast-brief .brief-kind{margin-left:36px}}
+@media(prefers-reduced-motion:reduce){.embedded-chat .prompt-card:hover{transform:none}}
+@media(max-width:480px){.air-panel .aq-meter #air-value{top:43%}.air-panel .aq-grade{top:62%;bottom:auto}.forecast-brief>p{flex-basis:calc(100% - 42px);min-width:0}.forecast-brief .brief-kind{margin-top:-2px}.forecast-brief #brief-evidence-toggle{margin-left:auto}}
+
+:root{--compact-width:410px}.sidebar-weather .weather-icon{display:block;width:26px;height:26px}.sidebar-weather .weather-icon svg{width:100%;height:100%;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.sidebar-weather .flat-cloud{fill:#edf5ff;stroke:#8fb7ef}.sidebar-weather .flat-cloud-light{fill:#f5f9ff;stroke:none}.sidebar-weather .flat-sun{fill:#ffcd65;stroke:#efb954}.sidebar-weather .flat-ray{stroke:#efb954}.sidebar-weather .flat-moon{fill:#d5e2ff;stroke:#9eb8e9}.sidebar-weather .flat-rain{fill:#82b5fa;stroke:none}.sidebar-weather .flat-snow,.sidebar-weather .flat-fog{stroke:#8fb7ef}
+
+/* Middle panel expansion only. Both hourly sections belong to one scroller. */
+.middle-surface{--hours-preview-height:238px;--hours-expanded-height:480px}
+.middle-surface>.air-panel{display:flex;flex-direction:column}
+.middle-surface>.hourly-panel{display:flex;flex-direction:column;min-height:0}
+.middle-surface>.hourly-panel>.hourly-heading{flex:none}
+.middle-surface>.air-panel>.sectionhead,.middle-surface>.air-panel>.air-body{flex:none}
+.middle-surface .pollutants{margin-top:auto;padding-top:20px;min-width:0}
+.pollutants-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:14px;border-top:1px dashed #e6edf8;margin-bottom:10px}
+.pollutants-heading h3{font-size:12px;line-height:20px;font-weight:600;color:#879bb9}
+#pollutants-retry{padding:2px 6px;border-radius:7px;background:#edf4ff;color:var(--color-primary);font-size:11px;line-height:18px}
+.pollutant-row{display:grid;grid-template-columns:48px minmax(0,1fr) 40px;align-items:center;gap:12px;min-height:25px;font-size:12px;line-height:20px}
+.pollutant-row>span:first-child{color:#7388a8}.pollutant-row strong{font-size:13px;font-weight:650;text-align:right;font-variant-numeric:tabular-nums;color:var(--color-text)}
+.pollutant-track{height:5px;background:#edf2fb;border-radius:999px;overflow:hidden}
+.pollutant-track>span{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#8ab3ff,var(--color-primary))}
+.pollutant-row.is-missing .pollutant-track{background:repeating-linear-gradient(90deg,#edf2fa 0 5px,transparent 5px 8px)}
+.pollutant-row.is-loading .pollutant-track{animation:skeleton-pulse 1.4s infinite}
+#pollutants-note{font-size:10px;line-height:17px;color:#93a4bc;margin-top:7px;overflow-wrap:anywhere}
+.middle-surface .hourly-scroll{flex:1 1 0;height:0;min-height:var(--hours-preview-height);min-width:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#d8e4f6 transparent;border:1px solid #edf2fb;border-radius:18px;background:#fbfdff;padding:8px;mask-image:linear-gradient(to bottom,#000 0,#000 calc(100% - 46px),transparent 100%);-webkit-mask-image:linear-gradient(to bottom,#000 0,#000 calc(100% - 46px),transparent 100%)}
+.middle-surface.hours-expanded .hourly-scroll{height:0;min-height:var(--hours-expanded-height);mask-image:none;-webkit-mask-image:none}
+.middle-surface .hourly-scroll:focus-visible{outline:2px solid #9dbaff;outline-offset:3px}
+.middle-surface .hourly-scroll .hourly{max-height:none;overflow:visible;display:flex;flex-direction:column}
+.middle-surface .hourly-scroll details{margin:0}
+.middle-surface .hourly-scroll .hourly-labels{display:grid;grid-template-columns:minmax(60px,1fr) 28px minmax(45px,.9fr) minmax(76px,.9fr);gap:8px;padding:5px 10px 10px;margin-bottom:6px;border-bottom:1px solid #edf2fb}
+.middle-surface .hourly-labels>span:nth-last-child(-n+2){text-align:right}
+.middle-surface .hourly-scroll .hour{min-height:43px}
+.middle-surface .hourly-period{padding:9px 10px 3px;color:#96a7bf;font-size:11px;line-height:18px}
+@media(min-width:721px){.middle-surface.hours-expanded .pollutants{padding-top:28px}}
+@media(max-width:720px){.middle-surface{--hours-preview-height:230px;--hours-expanded-height:430px}.middle-surface .pollutants{margin-top:0;padding-top:18px}.middle-surface .hourly-scroll{padding:6px;border-radius:15px}}
+@media(max-width:480px){.middle-surface .hourly-scroll .hourly-labels{padding:4px 7px 9px;gap:5px;grid-template-columns:minmax(54px,1fr) 24px minmax(42px,.8fr) 72px}.pollutant-row{gap:10px;grid-template-columns:42px minmax(0,1fr) 38px}.pollutants-heading h3{font-size:11px}}
+@media(prefers-reduced-motion:reduce){.pollutant-row.is-loading .pollutant-track{animation:none}}
+
+/* Reference proportions: 30px dashboard cards, 52px chat frame, 24px inner cards. */
+:root{--radius:30px;--middle-radius:30px;--radius-chat-frame:52px;--radius-inner-card:24px}
+#dashboard>.current,#dashboard>.trend,#dashboard>.week{border-radius:var(--radius)}
+#chat-view{border-radius:var(--radius-chat-frame)}
+.embedded-chat .sidebar-weather,.embedded-chat .prompt-card{border-radius:var(--radius-inner-card)}
+.week-scroll{overflow-x:auto;overflow-y:hidden;scrollbar-width:thin;margin-top:18px;border-radius:20px}
+.week-scroll:focus-visible{outline:2px solid #9dbaff;outline-offset:3px}
+.week-scroll .daily{position:relative;display:grid;gap:0;min-width:805px;margin:0;overflow:visible;padding:0}
+.week-scroll .day{height:310px;min-width:0;padding:12px 8px;border-radius:20px}
+.week-scroll .day>strong:last-of-type,.week-scroll .temperature-track,.week-scroll .change-note{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);margin:0;padding:0;white-space:nowrap}
+.week-scroll .day>.rain-reading{margin-top:auto;margin-bottom:0}
+.week-scroll .day .weather-icon{margin-top:8px}
+.week-scroll .day+.day:not(.today){border-left-color:transparent}
+.week-temperature-chart{position:absolute;left:0;top:132px;width:100%;height:150px;overflow:visible;pointer-events:none;z-index:1}
+.week-temperature-chart .week-high{stroke:var(--color-primary)}.week-temperature-chart .week-low{stroke:#adc9ef}
+.week-temperature-chart .point{fill:white;stroke-width:2}
+.week-temperature-chart .label{stroke:none;font-size:12px;font-weight:650;fill:#25446d}
+.week-temperature-chart .week-low.label{fill:#6689b8;font-weight:550}
+@media(max-width:720px){:root{--radius:26px;--middle-radius:26px;--radius-chat-frame:32px}.week-scroll .daily{min-width:805px}.week-scroll .day{min-width:0}}
+
+#profile-toggle img,.profile-avatar img{width:100%;height:100%;object-fit:cover;border-radius:inherit;display:block}
+#profile-toggle:has(img){padding:0;overflow:hidden}#profile-edit{background:transparent;color:var(--color-text);padding:10px 12px;text-align:left;border-radius:10px;width:100%}
+#auth-form small,.profile-help,#profile-form>small{font-size:11px;line-height:19px;color:var(--color-text-secondary);display:block;margin-top:6px}
+#profile-dialog{width:440px;max-width:calc(100vw - 32px);max-height:90dvh;overflow:auto;padding:24px;border:1px solid var(--context-border);border-radius:28px;color:var(--color-text);background:white}
+#profile-dialog::backdrop{background:#19335455;backdrop-filter:blur(3px)}.avatar-editor{display:flex;align-items:center;gap:12px;flex-wrap:wrap}#avatar-preview{width:64px;height:64px;display:grid;place-items:center;border-radius:50%;background:#eaf2ff;color:var(--color-primary);overflow:hidden;font-size:24px}
+.upload-label,#avatar-remove{cursor:pointer;font-size:12px;padding:9px 12px;background:#edf4ff;color:var(--color-primary);border-radius:12px}.upload-label{position:relative;overflow:hidden}.upload-label input{position:absolute;inset:0;opacity:0;width:100%;cursor:pointer}
+#profile-form label{display:block;margin-top:18px;font-size:14px}#profile-form input{display:block;width:100%;padding:12px;border:1px solid #e2eafa;border-radius:14px;margin-top:8px}#profile-error{font-size:12px;line-height:20px;margin-top:12px;color:var(--color-text-secondary)}#profile-save{margin-top:16px;width:100%;padding:12px;border-radius:14px;background:var(--color-primary);color:white}
+
+#close-assistant{display:grid;place-items:center;flex:none;padding:0;line-height:1}
+#close-assistant svg{display:block;width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round}
+
+/* Compact assistant: header handoff, quiet source line and a little breathing room. */
+:root{--compact-width:430px}
+#assistant{height:500px;gap:12px;padding:18px;border-radius:28px;background:#fff;box-shadow:0 14px 48px #264f8c20}
+#assistant .assistant-heading{align-items:center;gap:10px;flex:none}
+#assistant .assistant-heading>div:first-child{min-width:0;flex:1}
+#assistant .assistant-heading h2{font-size:18px;line-height:24px}
+#compact-context-status{font-size:11px;line-height:18px;margin-left:16px}
+.compact-header-actions{display:flex;align-items:center;gap:8px;flex:none}
+#assistant #expand-conversation{align-self:auto;margin:0;padding:6px 10px;border:1px solid #e1ebfe;background:#f7faff;border-radius:999px;font-size:11px;line-height:20px;color:#55749f;white-space:nowrap}
+#assistant #expand-conversation:hover{background:#edf4ff;color:var(--color-primary)}
+#assistant #close-assistant{width:30px;height:30px;background:#f2f6fc}
+#compact-weather{flex:none;padding:10px 12px;border-radius:16px;background:#f6f9ff}
+#assistant #conversation{padding:0;scrollbar-color:#d3dfef transparent}
+#assistant .reply{padding:14px 15px;margin:0 0 10px;border-radius:20px 20px 20px 6px;background:#eaf1ff;font-size:14px;line-height:24px}
+#assistant .user-question{margin:8px 0 10px auto}
+#assistant #compact-source{flex:none;font-size:10px;line-height:17px;color:#8ca1bf;margin:0 4px}
+#assistant #compact-source:before{content:'✦';font-size:9px;color:#7da5e6;margin-right:6px}
+#assistant .quick-questions{gap:6px;flex:none}
+#assistant .quick-questions button{background:#f7faff;border:1px solid #e2ebfe;padding:6px 9px;border-radius:999px;font-size:11px;line-height:18px;color:#526f9b}
+#assistant .quick-questions button:before{content:'✦';font-size:8px;color:#80a6ed;margin-right:5px}
+#assistant .quick-questions button:hover{background:#edf4ff}
+#assistant #ask-form .searchbox{padding:6px;gap:8px;border-radius:18px;background:#f5f8fd;border-color:#e2ebfb}
+#assistant #ask-form input{font-size:13px;padding:9px 7px}
+#assistant #ask-form button{display:grid;place-items:center;width:38px;height:38px;padding:0;border-radius:13px}
+#assistant #ask-form button svg{display:block;width:23px;height:23px;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;fill:none}
+@media(max-width:480px){#assistant{height:510px;padding:16px;gap:10px}.compact-header-actions{gap:5px}#assistant #expand-conversation{padding:5px 8px;font-size:10px}#assistant .quick-questions{gap:5px}#assistant .quick-questions button{font-size:10px;padding:5px 8px}#assistant .quick-questions button:before{margin-right:3px}}
+
+.hour .rain-caption{display:none}
+.day .rain-reading{gap:5px;font-size:11px}
+.day .rain-caption{font-size:10px;color:#8b9cb5}
+.day .rain-track{width:24px}

@@ -1,0 +1,11 @@
+{
+  "source": "https://raw.githubusercontent.com/wandergis/coordTransform_py/master/coordTransform_utils.py",
+  "sha256": "ea04b3fbd4023704ad42e4f270e5ec4f5fea65fad6ecea0000139e9eee7f5c85",
+  "included_functions": [
+    "wgs84_to_gcj02",
+    "_transformlat",
+    "_transformlng",
+    "out_of_china"
+  ],
+  "license": "MIT"
+}

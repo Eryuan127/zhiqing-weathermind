@@ -1,0 +1,12 @@
+{
+  "source": "https://geo.datav.aliyun.com/areas_v3/bound/310000_full.json",
+  "documentation": "https://help.aliyun.com/en/datav/datav-7-0/user-guide/datav-geoatlas-widgets/",
+  "source_coordinate_system": "GCJ-02",
+  "output_coordinate_system": "WGS84 (iterative approximate inverse)",
+  "coordinate_code": "wandergis/coordTransform_py (MIT)",
+  "license": "DataV/AMAP learning and communication only; not cleared for commercial redistribution",
+  "districts": 16,
+  "source_sha256": "5bfc0e2792b3376f71203efe62285da2e7da985d1499bf0695e1121159916f72",
+  "prepared_at": "2026-11-07T06:44:50.131694+00:00",
+  "limitations": "Historical third-party geometry, not an authoritative cadastral or current coastline survey"
+}

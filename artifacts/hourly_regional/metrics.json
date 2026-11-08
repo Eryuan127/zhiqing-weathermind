@@ -1,0 +1,527 @@
+{
+  "environment": {
+    "numpy": "2.4.4",
+    "scikit-learn": "1.8.0",
+    "joblib": "1.5.3"
+  },
+  "training_script_sha256": "5faebd58ce9ecef03698e257be28602f1f480454333e2543c368424daddec0c7",
+  "schema_version": 2,
+  "target": "next_hour_temperature",
+  "features": [
+    "lag_1",
+    "lag_2",
+    "lag_24",
+    "hour_sin",
+    "hour_cos"
+  ],
+  "selected": "ridge",
+  "validation_mae": {
+    "persistence": 0.4271241272009715,
+    "linear": 0.4270194934482021,
+    "ridge": 0.42690744361202615
+  },
+  "test_mae": {
+    "persistence": 0.4689878234398782,
+    "linear": 0.44398380337092275,
+    "ridge": 0.4439366392444312
+  },
+  "test_metrics": {
+    "persistence": {
+      "mae": 0.4689878234398782,
+      "rmse": 0.7974860614862432
+    },
+    "linear": {
+      "mae": 0.44398380337092275,
+      "rmse": 0.6855589431302627
+    },
+    "ridge": {
+      "mae": 0.4439366392444312,
+      "rmse": 0.6854802850098515
+    }
+  },
+  "scope": "Shanghai municipality polygon; pooled 12-point ERA5 historical experiment; live accuracy unverified",
+  "splits": {
+    "train_2023": 104832,
+    "validation_2024": 105408,
+    "test_2025": 105120
+  },
+  "sources": [
+    {
+      "id": "SH01",
+      "latitude": 31.23,
+      "longitude": 121.47,
+      "sha256": "9d21c9e3b064234f80aa381ac1c1bade15102dda5d627530dadcd5e738860aad",
+      "grid_latitude": 31.25,
+      "grid_longitude": 121.5,
+      "n": 26280
+    },
+    {
+      "id": "SH02",
+      "latitude": 31.83509,
+      "longitude": 121.22687,
+      "sha256": "ac70960a19d8dd8cb727eb7e16a8cc8294c8361843c4825c3e66b9ea3414b892",
+      "grid_latitude": 31.75,
+      "grid_longitude": 121.25,
+      "n": 26280
+    },
+    {
+      "id": "SH03",
+      "latitude": 31.58509,
+      "longitude": 121.87687,
+      "sha256": "01a346ecc310f333d471182c0766a0adeb3119f07ab532507846ee69373dfcd2",
+      "grid_latitude": 31.5,
+      "grid_longitude": 122.0,
+      "n": 26280
+    },
+    {
+      "id": "SH04",
+      "latitude": 30.73509,
+      "longitude": 121.42687,
+      "sha256": "4fab189812ac2f1fdd15243cdd5ea92f6e837723ee84760512e2b4fdad314f52",
+      "grid_latitude": 30.75,
+      "grid_longitude": 121.25,
+      "n": 26280
+    },
+    {
+      "id": "SH05",
+      "latitude": 30.93509,
+      "longitude": 121.87687,
+      "sha256": "b6249efe87e7d9bdf46535fd1c231693011b038fa42bb3f37057c1cabbc1762f",
+      "grid_latitude": 31.0,
+      "grid_longitude": 121.75,
+      "n": 26280
+    },
+    {
+      "id": "SH06",
+      "latitude": 31.08509,
+      "longitude": 121.02687,
+      "sha256": "524255a9e1339ada6917db427c4118b9424c0419c1d03c6e60153bb4c1a6b1c7",
+      "grid_latitude": 31.0,
+      "grid_longitude": 121.0,
+      "n": 26280
+    },
+    {
+      "id": "SH07",
+      "latitude": 31.6,
+      "longitude": 121.45,
+      "sha256": "7c086c3084b7e5ce1589d451c2cec90638a204e2604ecc143c896af0dfa15066",
+      "grid_latitude": 31.5,
+      "grid_longitude": 121.5,
+      "n": 26280
+    },
+    {
+      "id": "SH08",
+      "latitude": 31.2,
+      "longitude": 121.78,
+      "sha256": "11b8b239e48de185bc391abd77dc520d58ae0bd9feab967fc9501b0622fdd352",
+      "grid_latitude": 31.25,
+      "grid_longitude": 121.75,
+      "n": 26280
+    },
+    {
+      "id": "SH09",
+      "latitude": 30.98509,
+      "longitude": 121.32687,
+      "sha256": "b279ccbecd7317d515630a921164739443bbd70729a0d8162ef2f2322866c525",
+      "grid_latitude": 31.0,
+      "grid_longitude": 121.25,
+      "n": 26280
+    },
+    {
+      "id": "SH10",
+      "latitude": 31.73509,
+      "longitude": 121.52687,
+      "sha256": "6c73cb25b3cba5503ab5c20e3faa42d880270589fa29395e85aac2b118a67ab1",
+      "grid_latitude": 31.75,
+      "grid_longitude": 121.5,
+      "n": 26280
+    },
+    {
+      "id": "SH11",
+      "latitude": 31.03509,
+      "longitude": 121.62687,
+      "sha256": "95456b10eb0ee043526034bb2047be0e2847909af012512a53a97c3ecddbbaa2",
+      "grid_latitude": 31.0,
+      "grid_longitude": 121.75,
+      "n": 26280
+    },
+    {
+      "id": "SH12",
+      "latitude": 31.43509,
+      "longitude": 121.62687,
+      "sha256": "20056b8cb37cd84aab3e240152115771f1bdbca5fd5886c1ce63be58b944a6e6",
+      "grid_latitude": 31.5,
+      "grid_longitude": 121.5,
+      "n": 26280
+    }
+  ],
+  "unique_grid_cells": 10,
+  "per_point": {
+    "SH01": {
+      "n": 8760,
+      "models": {
+        "persistence": {
+          "mae": 0.5672945205479452,
+          "rmse": 0.9121472233568578
+        },
+        "linear": {
+          "mae": 0.4971725342138279,
+          "rmse": 0.7630666439586823
+        },
+        "ridge": {
+          "mae": 0.49685833655595135,
+          "rmse": 0.7631954641795913
+        }
+      }
+    },
+    "SH02": {
+      "n": 8760,
+      "models": {
+        "persistence": {
+          "mae": 0.5478196347031963,
+          "rmse": 0.9204705219262374
+        },
+        "linear": {
+          "mae": 0.5054727720601369,
+          "rmse": 0.7961083484298024
+        },
+        "ridge": {
+          "mae": 0.5043331156477574,
+          "rmse": 0.7952256293561972
+        }
+      }
+    },
+    "SH03": {
+      "n": 8760,
+      "models": {
+        "persistence": {
+          "mae": 0.12874429223744294,
+          "rmse": 0.21419915625140262
+        },
+        "linear": {
+          "mae": 0.25639838330643494,
+          "rmse": 0.32192975577565824
+        },
+        "ridge": {
+          "mae": 0.25937190668128923,
+          "rmse": 0.3251613620740197
+        }
+      }
+    },
+    "SH04": {
+      "n": 8760,
+      "models": {
+        "persistence": {
+          "mae": 0.5593150684931507,
+          "rmse": 0.8934886220922006
+        },
+        "linear": {
+          "mae": 0.5143148670453215,
+          "rmse": 0.7703408247887349
+        },
+        "ridge": {
+          "mae": 0.5136616983533414,
+          "rmse": 0.7697636687831834
+        }
+      }
+    },
+    "SH05": {
+      "n": 8760,
+      "models": {
+        "persistence": {
+          "mae": 0.36117579908675795,
+          "rmse": 0.5493094461047513
+        },
+        "linear": {
+          "mae": 0.3331616655709467,
+          "rmse": 0.45991683677739964
+        },
+        "ridge": {
+          "mae": 0.33379082382591946,
+          "rmse": 0.460632919272898
+        }
+      }
+    },
+    "SH06": {
+      "n": 8760,
+      "models": {
+        "persistence": {
+          "mae": 0.6785502283105024,
+          "rmse": 1.0704205847752097
+        },
+        "linear": {
+          "mae": 0.57033914589263,
+          "rmse": 0.8912864255595436
+        },
+        "ridge": {
+          "mae": 0.5696973674172915,
+          "rmse": 0.8914538300348073
+        }
+      }
+    },
+    "SH07": {
+      "n": 8760,
+      "models": {
+        "persistence": {
+          "mae": 0.46480593607305937,
+          "rmse": 0.7991912293090848
+        },
+        "linear": {
+          "mae": 0.47469866487223306,
+          "rmse": 0.7133350353449415
+        },
+        "ridge": {
+          "mae": 0.4737354944428023,
+          "rmse": 0.7121173628452386
+        }
+      }
+    },
+    "SH08": {
+      "n": 8760,
+      "models": {
+        "persistence": {
+          "mae": 0.33141552511415523,
+          "rmse": 0.5166740314690884
+        },
+        "linear": {
+          "mae": 0.3236428295709308,
+          "rmse": 0.444802720950174
+        },
+        "ridge": {
+          "mae": 0.32431764878917096,
+          "rmse": 0.44553469899609727
+        }
+      }
+    },
+    "SH09": {
+      "n": 8760,
+      "models": {
+        "persistence": {
+          "mae": 0.687568493150685,
+          "rmse": 1.069180649036435
+        },
+        "linear": {
+          "mae": 0.5631242814146545,
+          "rmse": 0.8719245618204332
+        },
+        "ridge": {
+          "mae": 0.5633458834517935,
+          "rmse": 0.8728817728116971
+        }
+      }
+    },
+    "SH10": {
+      "n": 8760,
+      "models": {
+        "persistence": {
+          "mae": 0.47562785388127854,
+          "rmse": 0.820028259898379
+        },
+        "linear": {
+          "mae": 0.4822656298022219,
+          "rmse": 0.7310738262563286
+        },
+        "ridge": {
+          "mae": 0.4812730260060529,
+          "rmse": 0.7298678614284221
+        }
+      }
+    },
+    "SH11": {
+      "n": 8760,
+      "models": {
+        "persistence": {
+          "mae": 0.3607305936073059,
+          "rmse": 0.5484765118200275
+        },
+        "linear": {
+          "mae": 0.33251620182950103,
+          "rmse": 0.45890112069154826
+        },
+        "ridge": {
+          "mae": 0.33311887531900225,
+          "rmse": 0.4596256863548431
+        }
+      }
+    },
+    "SH12": {
+      "n": 8760,
+      "models": {
+        "persistence": {
+          "mae": 0.46480593607305937,
+          "rmse": 0.7991912293090848
+        },
+        "linear": {
+          "mae": 0.47469866487223306,
+          "rmse": 0.7133350353449415
+        },
+        "ridge": {
+          "mae": 0.4737354944428023,
+          "rmse": 0.7121173628452386
+        }
+      }
+    }
+  },
+  "spatial_holdout": [
+    {
+      "grid": [
+        30.75,
+        121.25
+      ],
+      "n": 8760,
+      "ridge": {
+        "mae": 0.5131492123590472,
+        "rmse": 0.770371230412979
+      },
+      "persistence": {
+        "mae": 0.5593150684931507,
+        "rmse": 0.8934886220922006
+      }
+    },
+    {
+      "grid": [
+        31.0,
+        121.0
+      ],
+      "n": 8760,
+      "ridge": {
+        "mae": 0.5685791930608155,
+        "rmse": 0.8952967802801655
+      },
+      "persistence": {
+        "mae": 0.6785502283105024,
+        "rmse": 1.0704205847752097
+      }
+    },
+    {
+      "grid": [
+        31.0,
+        121.25
+      ],
+      "n": 8760,
+      "ridge": {
+        "mae": 0.5636261542363633,
+        "rmse": 0.8789422608096961
+      },
+      "persistence": {
+        "mae": 0.687568493150685,
+        "rmse": 1.069180649036435
+      }
+    },
+    {
+      "grid": [
+        31.0,
+        121.75
+      ],
+      "n": 17520,
+      "ridge": {
+        "mae": 0.33896045044116546,
+        "rmse": 0.4635931487334261
+      },
+      "persistence": {
+        "mae": 0.36095319634703193,
+        "rmse": 0.5488931369575382
+      }
+    },
+    {
+      "grid": [
+        31.25,
+        121.5
+      ],
+      "n": 8760,
+      "ridge": {
+        "mae": 0.49596331213193445,
+        "rmse": 0.7642488579300504
+      },
+      "persistence": {
+        "mae": 0.5672945205479452,
+        "rmse": 0.9121472233568578
+      }
+    },
+    {
+      "grid": [
+        31.25,
+        121.75
+      ],
+      "n": 8760,
+      "ridge": {
+        "mae": 0.3278317660918281,
+        "rmse": 0.4476848565434081
+      },
+      "persistence": {
+        "mae": 0.33141552511415523,
+        "rmse": 0.5166740314690884
+      }
+    },
+    {
+      "grid": [
+        31.5,
+        121.5
+      ],
+      "n": 17520,
+      "ridge": {
+        "mae": 0.4765530304420805,
+        "rmse": 0.7146351605799393
+      },
+      "persistence": {
+        "mae": 0.46480593607305937,
+        "rmse": 0.7991912293090848
+      }
+    },
+    {
+      "grid": [
+        31.5,
+        122.0
+      ],
+      "n": 8760,
+      "ridge": {
+        "mae": 0.28140760367126916,
+        "rmse": 0.347883828538338
+      },
+      "persistence": {
+        "mae": 0.12874429223744294,
+        "rmse": 0.21419915625140262
+      }
+    },
+    {
+      "grid": [
+        31.75,
+        121.25
+      ],
+      "n": 8760,
+      "ridge": {
+        "mae": 0.503955702173432,
+        "rmse": 0.7965620657522712
+      },
+      "persistence": {
+        "mae": 0.5478196347031963,
+        "rmse": 0.9204705219262374
+      }
+    },
+    {
+      "grid": [
+        31.75,
+        121.5
+      ],
+      "n": 8760,
+      "ridge": {
+        "mae": 0.48230476288210905,
+        "rmse": 0.7310130903196826
+      },
+      "persistence": {
+        "mae": 0.47562785388127854,
+        "rmse": 0.820028259898379
+      }
+    }
+  ],
+  "data_sha256": "a58d92ef5c5d93d7db83ac9482bf9a1b2d68422e8a6bc3078f32b7d0ac34dedd",
+  "boundary_sha256": "d524eec76a09db0673d80bcb3e7919727913ca3d97949f5e734eb055c4d46d04",
+  "limitations": [
+    "2023-2025 ERA5 gridded reanalysis, not station observations",
+    "Neighboring and duplicate grid cells are correlated",
+    "Time split per point; no future lags or standardization leakage",
+    "Geographic holdout diagnostic does not select deployment model",
+    "Historical boundary approximation; coastal reclamation may differ",
+    "Only one-step prediction, not a tomorrow forecast"
+  ]
+}

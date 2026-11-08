@@ -1,0 +1,59 @@
+/* Shared Soft Weather UI tokens. No runtime or framework dependencies. */
+:root{
+ color-scheme:light;--color-primary:#659bea;--color-primary-hover:#548adb;--color-bg:#f5f8fd;--color-surface:#fff;--color-surface-muted:#f8faff;
+ --color-text:#435672;--color-text-strong:#193354;--color-text-secondary:#71819a;--color-text-muted:#8b9cb5;--color-primary-soft:#edf4ff;
+ --color-border:#e8eef7;--color-track:#e6edf7;--color-focus:#88b2ee;--color-warning:#c18426;--color-rain:#5d9ce5;--color-success:#308260;--color-danger:#bb5960;
+ --color-green-soft:#e5f8ef;--color-orange-soft:#fff2e5;--color-sky:#b8ddff;--color-card-edge:#fff;--color-chart-fill:#659bea30;--color-chart-fade:#659bea03;
+ --shadow-surface:0 8px 30px rgba(38,79,140,.07);--shadow-hover:0 10px 32px rgba(38,79,140,.105);--shadow-primary:0 10px 32px rgba(56,107,180,.12);
+ --color-backdrop:#19335455;--color-shade:#19335433;--radius:24px;--gap:24px;--motion:200ms;--ease:cubic-bezier(.22,1,.36,1);
+ --weather-sun:#ffca58;--weather-sun-soft:#fff0b8;--weather-cloud:#9bc4f4;--weather-cloud-light:#f3f8ff;--weather-rain:#6da7ee;--weather-snow:#91c4e8;--weather-fog:#a2b6d0;--weather-night:#8b9eca;
+ --aq-green:#64bd90;--aq-yellow:#ecc65a;--aq-orange:#f2a265;--aq-red:#e77d82;--aq-purple:#b797cb;--aq-maroon:#aa7087;
+ --blue:var(--color-primary);--ink:var(--color-text-strong);--muted:var(--color-text-secondary);--line:var(--color-border);--soft:var(--color-primary-soft);--pale:var(--color-primary-soft);--canvas:var(--color-bg);--surface:var(--color-surface)
+}
+*{box-sizing:border-box}body{margin:0;color:var(--color-text);font:16px/1.5 Geist,"Microsoft YaHei",system-ui,sans-serif}button,input,textarea,select{font:inherit}button,a{-webkit-tap-highlight-color:transparent}button{cursor:pointer}button:disabled{opacity:.5;cursor:default}a{color:inherit;text-decoration:none}button,input,textarea,select{color:inherit}button{border:0}h1,h2,h3,strong{color:var(--color-text-strong)}h1,h2,h3{margin:0;text-wrap:balance}h2{font-size:22px;line-height:30px;font-weight:650;letter-spacing:-.35px}p{margin:0;text-wrap:pretty}button,a,summary{transition:background-color var(--motion) var(--ease),box-shadow var(--motion) var(--ease),color var(--motion) var(--ease)}:focus-visible{outline:2px solid var(--color-focus);outline-offset:3px}[hidden]{display:none!important}.sr-only,a.skip:not(:focus){position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}a.skip:focus{position:absolute;left:16px;top:8px;z-index:100}.data-note{font-size:12px;line-height:20px;color:var(--muted)}summary{cursor:pointer}svg{vertical-align:middle}.weather-icon{display:inline-block;flex:none;width:44px;height:44px;vertical-align:middle}.weather-icon svg{display:block;width:100%;height:100%}.flat-sun{fill:var(--weather-sun)}.flat-ray{stroke:var(--weather-sun);stroke-width:2.5;stroke-linecap:round}.flat-cloud{fill:#eaf4ff;stroke:var(--weather-cloud);stroke-width:2}.flat-cloud-light{fill:#f8fbff;stroke:none}.flat-rain{fill:var(--weather-rain)}.flat-snow{stroke:var(--weather-snow);stroke-width:2.5;stroke-linecap:round}.flat-fog{stroke:var(--weather-fog);stroke-width:3;stroke-linecap:round}.flat-moon{fill:var(--weather-night)}.welcome-sun circle{fill:var(--weather-sun)}.welcome-sun path{fill:none;stroke:var(--weather-sun);stroke-width:5;stroke-linecap:round}.welcome-cloud{fill:#f3f8ff;stroke:#6daaf0;stroke-width:4;stroke-linejoin:round}
+.digit-window{display:inline-block;overflow:hidden;vertical-align:bottom;line-height:inherit}.rolling-digit{display:inline-block;font-variant-numeric:tabular-nums}.loading-dots{display:flex;gap:6px;padding:8px 0}.loading-dots i{width:6px;height:6px;display:block;background:#a3bce8;border-radius:50%;animation:dot-pulse 1.3s infinite}.loading-dots i:nth-child(2){animation-delay:.15s}.loading-dots i:nth-child(3){animation-delay:.3s}@keyframes dot-pulse{50%{opacity:.35;transform:translateY(-3px)}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* Round 5: light originates at the upper left; effects never define geometry. */
+:root{
+ --color-text-secondary:#5f708a;--color-primary-ink:#416fac;--control-blue:#659bea;--color-focus:#79a5e4;
+ --gradient-control:linear-gradient(145deg,#7baff2,#659bea 66%,#5d92e1);--gradient-control-hover:linear-gradient(145deg,#6ba2ec,#548adb);
+ --ambient-ice:#d6edff;--ambient-sky:#b8ddff;--ambient-lilac:#dcd8ff;--ambient-mint:#ddf5ed;--ambient-warm:#ffe8b2;
+ --surface-premium:linear-gradient(145deg,#fff 0%,#fff 68%,#fbfcff 100%);
+ --glass-surface:#fff;--glass-border:rgba(255,255,255,.88);--glass-blur:12px;--glass-saturation:125%;
+ --shadow-soft:0 4px 12px rgba(42,76,125,.035),0 16px 40px rgba(42,76,125,.065);
+ --shadow-hover:0 8px 20px rgba(42,76,125,.055),0 22px 48px rgba(42,76,125,.085);
+ --shadow-inset:inset 1px 1px 0 rgba(255,255,255,.92),inset -1px -1px 0 rgba(42,76,125,.025);
+ --shadow-control:inset 1px 1px 0 rgba(255,255,255,.95),0 3px 9px rgba(42,76,125,.045);
+ --shadow-surface:var(--shadow-inset),var(--shadow-soft);
+ --shadow-primary:inset 1px 1px 0 rgba(255,255,255,.78),0 5px 14px rgba(42,76,125,.045),0 18px 42px rgba(69,115,173,.11);
+ --metal-surface:linear-gradient(135deg,#fff 2%,#f5f8fc 34%,#edf2f8 61%,#fbfdff 100%);
+ --texture-grain:url('illustrations/grain.svg');--texture-opacity:.022;
+ --focus-halo:0 0 0 3px rgba(101,155,234,.12),0 5px 18px rgba(42,76,125,.045);
+ --color-tooltip-surface:#fff;--color-tooltip-border:#e3ebf8;--color-chart-fill:#659bea29;--color-chart-fade:#659bea02
+}
+/* Opaque surfaces above are the no-backdrop-filter fallback. */
+@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+ :root{--glass-surface:rgba(255,255,255,.8);--color-tooltip-surface:rgba(255,255,255,.9)}
+}
+@media(max-width:720px){:root{--glass-blur:0px;--glass-saturation:100%;--glass-surface:#fff;--color-tooltip-surface:#fff;--texture-opacity:0}}
+
+/* Middle-row physical surfaces: a shared shell plus a genuinely recessed well. */
+:root{
+ --middle-radius:20px;--middle-padding:24px;--middle-gap:24px;--middle-content-gap:20px;
+ --middle-shadow:-1px -1px 0 rgba(255,255,255,.88),0 4px 12px rgba(42,76,125,.035),0 16px 40px rgba(42,76,125,.065);
+ --middle-border:#e4ebf5;
+ --deboss-surface:linear-gradient(145deg,#eaf0f8 0%,#f0f5fb 65%,#f5f8fc 100%);
+ --deboss-shadow:inset 5px 5px 11px rgba(76,102,141,.15),inset -5px -5px 12px rgba(255,255,255,.94),inset 1px 1px 3px rgba(76,102,141,.05);
+ --metric-tile-shadow:inset 1px 1px 0 rgba(255,255,255,.85),1px 3px 7px rgba(59,85,122,.04);
+ --badge-shadow:inset 1px 1px 0 rgba(255,255,255,.95),inset -1px -1px 0 rgba(85,113,155,.045),1px 3px 6px rgba(66,92,130,.075);
+ --badge-warm:linear-gradient(135deg,#fff8ea,#ffe8c6);--badge-sky:linear-gradient(135deg,#f0f8ff,#d9eaff);
+ --badge-mint:linear-gradient(135deg,#f0fcf9,#d8f0ee);--badge-lilac:linear-gradient(135deg,#f7f5ff,#e4dffc)
+}
+@media(max-width:720px){:root{--middle-padding:20px}}
+
+/* Embedded daily instrument strip; values still use the existing #metrics binding. */
+:root{--notch-width:760px;--notch-height:56px;--notch-rise:24px;--notch-radius:999px;--notch-surface:linear-gradient(180deg,#e7eef7,#edf3fa);--notch-shadow:inset 1px 2px 6px rgba(0,0,0,.08),inset -1px -1px 0 rgba(255,255,255,.86);--notch-divider:rgba(105,129,160,.18)}
+
+:root{--middle-divider:rgba(137,150,169,.3)}
+.token-usage{display:inline-flex;align-items:center;gap:5px;margin-left:12px;white-space:nowrap;font-variant-numeric:tabular-nums;vertical-align:middle}.token-usage svg{width:14px;height:14px;flex:none;fill:currentColor}

@@ -1,0 +1,166 @@
+{
+  "kind": "Developer-authored regression set, not an independent user study or held-out accuracy estimate",
+  "cases": [
+    {
+      "id": "T01",
+      "turns": [
+        "明天下午上海会下雨吗"
+      ],
+      "city": "上海",
+      "tool": "get_hourly_forecast"
+    },
+    {
+      "id": "T02",
+      "turns": [
+        "杭州后天下午天气"
+      ],
+      "city": "杭州",
+      "tool": "get_hourly_forecast"
+    },
+    {
+      "id": "T03",
+      "turns": [
+        "北京现在天气"
+      ],
+      "city": "北京",
+      "tool": "get_current_weather"
+    },
+    {
+      "id": "T04",
+      "turns": [
+        "广州当前温度"
+      ],
+      "city": "广州",
+      "tool": "get_current_weather"
+    },
+    {
+      "id": "T05",
+      "turns": [
+        "深圳明早要带伞吗"
+      ],
+      "city": "深圳",
+      "tool": "get_hourly_forecast"
+    },
+    {
+      "id": "T06",
+      "turns": [
+        "上海明天下午AQI怎么样"
+      ],
+      "city": "上海",
+      "tool": "get_air_quality_forecast"
+    },
+    {
+      "id": "T07",
+      "turns": [
+        "杭州今天空气质量"
+      ],
+      "city": "杭州",
+      "tool": "get_air_quality_forecast"
+    },
+    {
+      "id": "T08",
+      "turns": [
+        "北京明天PM2.5怎么样"
+      ],
+      "city": "北京",
+      "tool": "get_air_quality_forecast"
+    },
+    {
+      "id": "T09",
+      "turns": [
+        "上海明天下午跑步"
+      ],
+      "city": "上海",
+      "tool": "rank_time_slots"
+    },
+    {
+      "id": "T10",
+      "turns": [
+        "杭州明天下午散步"
+      ],
+      "city": "杭州",
+      "tool": "rank_time_slots"
+    },
+    {
+      "id": "T11",
+      "turns": [
+        "北京明天下午骑行"
+      ],
+      "city": "北京",
+      "tool": "rank_time_slots"
+    },
+    {
+      "id": "T12",
+      "turns": [
+        "广州明天下午拍照"
+      ],
+      "city": "广州",
+      "tool": "rank_time_slots"
+    },
+    {
+      "id": "T13",
+      "turns": [
+        "明天下午会下雨吗"
+      ],
+      "no_tools": true
+    },
+    {
+      "id": "T14",
+      "turns": [
+        "上海预测下个月15日准确气温"
+      ],
+      "no_tools": true
+    },
+    {
+      "id": "T15",
+      "turns": [
+        "上海预测上个月15日气温"
+      ],
+      "no_tools": true
+    },
+    {
+      "id": "T16",
+      "turns": [
+        "查询XYZABC123明天天气"
+      ],
+      "no_tools": true
+    },
+    {
+      "id": "T17",
+      "turns": [
+        "明天下午上海会下雨吗",
+        "那杭州呢",
+        "后天下午呢"
+      ],
+      "city": "杭州",
+      "tool": "get_hourly_forecast"
+    },
+    {
+      "id": "T18",
+      "turns": [
+        "北京当前天气",
+        "那广州呢"
+      ],
+      "city": "广州",
+      "tool": "get_current_weather"
+    },
+    {
+      "id": "T19",
+      "turns": [
+        "杭州明天下午跑步",
+        "那晚上呢"
+      ],
+      "city": "杭州",
+      "tool": "rank_time_slots"
+    },
+    {
+      "id": "T20",
+      "turns": [
+        "深圳明天下午散步",
+        "改成拍照呢"
+      ],
+      "city": "深圳",
+      "tool": "rank_time_slots"
+    }
+  ]
+}

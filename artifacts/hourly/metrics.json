@@ -1,0 +1,28 @@
+{
+  "target": "next_hour_temperature",
+  "features": [
+    "lag_1",
+    "lag_2",
+    "lag_24",
+    "hour_sin",
+    "hour_cos"
+  ],
+  "selected": "ridge",
+  "validation_mae": {
+    "persistence": 0.5095514571948999,
+    "linear": 0.49244887204249965,
+    "ridge": 0.491189120412687
+  },
+  "test_mae": {
+    "persistence": 0.5672945205479452,
+    "linear": 0.5105362910475731,
+    "ridge": 0.5094319590763012
+  },
+  "data_sha256": "7f13e41c9c74f5eb3f94190422dc0439ad10d944949f8837207521223e6352fd",
+  "scope": "Shanghai only; ERA5 historical hourly rolling evaluation; operational accuracy unverified",
+  "splits": {
+    "train": 26256,
+    "validation": 8784,
+    "test": 8760
+  }
+}
