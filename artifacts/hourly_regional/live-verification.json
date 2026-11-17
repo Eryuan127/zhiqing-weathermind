@@ -1,0 +1,181 @@
+{
+  "kind": "Live operational inputs and local trained model; public test points, not user GPS; inference success is not accuracy verification",
+  "results": [
+    {
+      "location": "中心城区",
+      "public_sample_coordinates": [
+        31.23,
+        121.47
+      ],
+      "elapsed_ms": 4520,
+      "result": {
+        "mode": "live_prediction",
+        "status": "experimental",
+        "prediction": 17.78,
+        "target_time": "2026-11-07T15:00:00",
+        "data_time": "2026-11-07T14:00:00",
+        "model": "hourly_ridge",
+        "source": "Open-Meteo model analysis",
+        "scope": "Shanghai municipality polygon; multi-point ERA5-trained model applied to operational model analysis; live accuracy unverified",
+        "unit": "°C",
+        "training_points": 12,
+        "model_version": "shanghai_regional_v2",
+        "reason": "operational_accuracy_unverified"
+      }
+    },
+    {
+      "location": "青浦",
+      "public_sample_coordinates": [
+        31.15,
+        121.12
+      ],
+      "elapsed_ms": 5846,
+      "result": {
+        "mode": "live_prediction",
+        "status": "experimental",
+        "prediction": 18.29,
+        "target_time": "2026-11-07T15:00:00",
+        "data_time": "2026-11-07T14:00:00",
+        "model": "hourly_ridge",
+        "source": "Open-Meteo model analysis",
+        "scope": "Shanghai municipality polygon; multi-point ERA5-trained model applied to operational model analysis; live accuracy unverified",
+        "unit": "°C",
+        "training_points": 12,
+        "model_version": "shanghai_regional_v2",
+        "reason": "operational_accuracy_unverified"
+      }
+    },
+    {
+      "location": "松江",
+      "public_sample_coordinates": [
+        31.03,
+        121.23
+      ],
+      "elapsed_ms": 2249,
+      "result": {
+        "mode": "live_prediction",
+        "status": "experimental",
+        "prediction": 18.22,
+        "target_time": "2026-11-07T15:00:00",
+        "data_time": "2026-11-07T14:00:00",
+        "model": "hourly_ridge",
+        "source": "Open-Meteo model analysis",
+        "scope": "Shanghai municipality polygon; multi-point ERA5-trained model applied to operational model analysis; live accuracy unverified",
+        "unit": "°C",
+        "training_points": 12,
+        "model_version": "shanghai_regional_v2",
+        "reason": "operational_accuracy_unverified"
+      }
+    },
+    {
+      "location": "金山",
+      "public_sample_coordinates": [
+        30.72,
+        121.34
+      ],
+      "elapsed_ms": 2254,
+      "result": {
+        "mode": "live_prediction",
+        "status": "experimental",
+        "prediction": 18.73,
+        "target_time": "2026-11-07T15:00:00",
+        "data_time": "2026-11-07T14:00:00",
+        "model": "hourly_ridge",
+        "source": "Open-Meteo model analysis",
+        "scope": "Shanghai municipality polygon; multi-point ERA5-trained model applied to operational model analysis; live accuracy unverified",
+        "unit": "°C",
+        "training_points": 12,
+        "model_version": "shanghai_regional_v2",
+        "reason": "operational_accuracy_unverified"
+      }
+    },
+    {
+      "location": "临港",
+      "public_sample_coordinates": [
+        30.9,
+        121.92
+      ],
+      "elapsed_ms": 2187,
+      "result": {
+        "mode": "live_prediction",
+        "status": "experimental",
+        "prediction": 18.35,
+        "target_time": "2026-11-07T15:00:00",
+        "data_time": "2026-11-07T14:00:00",
+        "model": "hourly_ridge",
+        "source": "Open-Meteo model analysis",
+        "scope": "Shanghai municipality polygon; multi-point ERA5-trained model applied to operational model analysis; live accuracy unverified",
+        "unit": "°C",
+        "training_points": 12,
+        "model_version": "shanghai_regional_v2",
+        "reason": "operational_accuracy_unverified"
+      }
+    },
+    {
+      "location": "崇明",
+      "public_sample_coordinates": [
+        31.63,
+        121.4
+      ],
+      "elapsed_ms": 2395,
+      "result": {
+        "mode": "live_prediction",
+        "status": "experimental",
+        "prediction": 18.16,
+        "target_time": "2026-11-07T15:00:00",
+        "data_time": "2026-11-07T14:00:00",
+        "model": "hourly_ridge",
+        "source": "Open-Meteo model analysis",
+        "scope": "Shanghai municipality polygon; multi-point ERA5-trained model applied to operational model analysis; live accuracy unverified",
+        "unit": "°C",
+        "training_points": 12,
+        "model_version": "shanghai_regional_v2",
+        "reason": "operational_accuracy_unverified"
+      }
+    },
+    {
+      "location": "长兴岛",
+      "public_sample_coordinates": [
+        31.39,
+        121.7
+      ],
+      "elapsed_ms": 1845,
+      "result": {
+        "mode": "live_prediction",
+        "status": "experimental",
+        "prediction": 17.51,
+        "target_time": "2026-11-07T15:00:00",
+        "data_time": "2026-11-07T14:00:00",
+        "model": "hourly_ridge",
+        "source": "Open-Meteo model analysis",
+        "scope": "Shanghai municipality polygon; multi-point ERA5-trained model applied to operational model analysis; live accuracy unverified",
+        "unit": "°C",
+        "training_points": 12,
+        "model_version": "shanghai_regional_v2",
+        "reason": "operational_accuracy_unverified"
+      }
+    },
+    {
+      "location": "横沙岛",
+      "public_sample_coordinates": [
+        31.34,
+        121.84
+      ],
+      "elapsed_ms": 2145,
+      "result": {
+        "mode": "live_prediction",
+        "status": "experimental",
+        "prediction": 17.62,
+        "target_time": "2026-11-07T15:00:00",
+        "data_time": "2026-11-07T14:00:00",
+        "model": "hourly_ridge",
+        "source": "Open-Meteo model analysis",
+        "scope": "Shanghai municipality polygon; multi-point ERA5-trained model applied to operational model analysis; live accuracy unverified",
+        "unit": "°C",
+        "training_points": 12,
+        "model_version": "shanghai_regional_v2",
+        "reason": "operational_accuracy_unverified"
+      }
+    }
+  ]
+}

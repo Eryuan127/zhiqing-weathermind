@@ -1,0 +1,163 @@
+{
+  "task": "One-day-ahead daily mean temperature, Shanghai ERA5 reanalysis",
+  "scope": "Shanghai only; historical rolling one-step evaluation, not operational forecast accuracy",
+  "data_sha256": "b39f9f8adbb6b8b1f94f17e89e0036b4c83a2a6f50fcc670eca2b5e152cb14b3",
+  "provenance": {
+    "source": "Open-Meteo ERA5 reanalysis",
+    "url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": 31.22222,
+      "longitude": 121.45806,
+      "start_date": "2021-01-01",
+      "end_date": "2025-12-31",
+      "daily": "temperature_2m_mean",
+      "timezone": "Asia/Shanghai",
+      "models": "era5"
+    },
+    "downloaded_at": "2026-11-06T08:31:19.938117+00:00",
+    "license": "CC BY 4.0; attribution Open-Meteo / ECMWF ERA5"
+  },
+  "features": [
+    "lag_1",
+    "lag_2",
+    "lag_3",
+    "lag_7",
+    "mean_3",
+    "mean_7",
+    "std_7",
+    "day_sin",
+    "day_cos"
+  ],
+  "splits": {
+    "train": {
+      "start": "2021-01-08",
+      "end": "2023-12-31",
+      "samples": 1088
+    },
+    "validation": {
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "samples": 366
+    },
+    "test": {
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "samples": 365
+    }
+  },
+  "validation_metrics": {
+    "persistence": {
+      "mae": 1.3456284153005462,
+      "rmse": 1.8477057107241461
+    },
+    "linear": {
+      "mae": 1.269503667857415,
+      "rmse": 1.6957959520880512
+    },
+    "ridge": {
+      "mae": 1.3077773009253368,
+      "rmse": 1.7065806006319324
+    },
+    "random_forest": {
+      "mae": 1.3462325189831241,
+      "rmse": 1.7833698454247908
+    }
+  },
+  "selected_by_validation_mae": "linear",
+  "test_metrics": {
+    "persistence": {
+      "mae": 1.4298630136986301,
+      "rmse": 1.9893345758807193
+    },
+    "linear": {
+      "mae": 1.3634093147936626,
+      "rmse": 1.8218155835081637
+    },
+    "ridge": {
+      "mae": 1.395812516927739,
+      "rmse": 1.857645470018401
+    },
+    "random_forest": {
+      "mae": 1.3813595282324447,
+      "rmse": 1.879610069528748
+    },
+    "ridge_no_calendar": {
+      "mae": 1.4291278602042343,
+      "rmse": 1.9264661956693712
+    }
+  },
+  "seed": 42,
+  "versions": {
+    "python": "3.14.0",
+    "numpy": "2.4.4",
+    "sklearn": "1.8.0"
+  },
+  "limitations": [
+    "ERA5 is reanalysis, not station observations",
+    "Historical lag values may be delayed or revised in live use",
+    "No claim to outperform Open-Meteo operational forecasts",
+    "No independent probability interval calibration"
+  ],
+  "worst_cases": [
+    {
+      "date": "2025-03-01",
+      "actual": 18.2,
+      "prediction": 11.101059351609505,
+      "absolute_error": 7.098940648390494
+    },
+    {
+      "date": "2025-12-19",
+      "actual": 15.1,
+      "prediction": 9.437323822573402,
+      "absolute_error": 5.662676177426597
+    },
+    {
+      "date": "2025-03-03",
+      "actual": 9.5,
+      "prediction": 14.872470710314532,
+      "absolute_error": 5.372470710314532
+    },
+    {
+      "date": "2025-01-15",
+      "actual": 4.1,
+      "prediction": 9.318718240007156,
+      "absolute_error": 5.218718240007156
+    },
+    {
+      "date": "2025-05-19",
+      "actual": 24.2,
+      "prediction": 19.157193445139303,
+      "absolute_error": 5.042806554860697
+    },
+    {
+      "date": "2025-06-22",
+      "actual": 22.8,
+      "prediction": 27.748831674373292,
+      "absolute_error": 4.948831674373292
+    },
+    {
+      "date": "2025-05-18",
+      "actual": 19.9,
+      "prediction": 24.767569981015303,
+      "absolute_error": 4.867569981015304
+    },
+    {
+      "date": "2025-11-18",
+      "actual": 7.1,
+      "prediction": 11.878164281239563,
+      "absolute_error": 4.7781642812395635
+    },
+    {
+      "date": "2025-03-28",
+      "actual": 8.9,
+      "prediction": 13.430041997918687,
+      "absolute_error": 4.530041997918687
+    },
+    {
+      "date": "2025-01-30",
+      "actual": 8.0,
+      "prediction": 3.609953584759971,
+      "absolute_error": 4.390046415240029
+    }
+  ]
+}

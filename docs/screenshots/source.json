@@ -1,0 +1,11 @@
+{
+  "source": "作者提供的2026年11月17日当前界面截图，原图直接复制，未修改内容",
+  "entry": "run_weather.py",
+  "home": "templates/index.html",
+  "assistant": "登录后 /assistant?embedded=1 -> templates/assistant_content.html",
+  "images": {
+    "dashboard.png": "27f687cb0f6d7fea526356821e07fc9d30bbfdf927d7ce7c8ee25db0b506a93f",
+    "assistant.png": "faa01d8500aeeba7a8cdb17249878e0e4cd0fdcdda480c52ca14fa16dcd8daec",
+    "compact-assistant.png": "efec6450ad6ab0e55a19b1e0f0e4841f8e2dcc077056eb85fa5e0699a8e07e4a"
+  }
+}

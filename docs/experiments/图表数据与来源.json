@@ -1,0 +1,29 @@
+{
+  "source": "artifacts/hourly_regional/test_predictions.csv",
+  "sha256": "ae8f75457e8981174672ea17cd9eb73e6f64767d130240f5a68af588f6df22de",
+  "n": 105120,
+  "metrics": {
+    "persistence": {
+      "mae": 0.4689878234398782,
+      "rmse": 0.7974860614862432
+    },
+    "linear": {
+      "mae": 0.44398380337092275,
+      "rmse": 0.6855589431302627
+    },
+    "ridge": {
+      "mae": 0.4439366392444312,
+      "rmse": 0.6854802850098515
+    }
+  },
+  "case_selection": "maximum absolute Ridge error; diagnostic, not representative performance",
+  "case": {
+    "point": "SH09",
+    "time": "2025-03-22T18:00:00",
+    "actual": "17.5",
+    "persistence": "24.9",
+    "linear": "24.047862977999152",
+    "ridge": "24.053180808235837"
+  },
+  "curve_n": 73
+}

@@ -1,0 +1,166 @@
+{
+  "kind": "Live API contract evaluation; not independent semantic/user accuracy",
+  "mode": "rules",
+  "tested": 6,
+  "passed": 6,
+  "source_sha256": "2b049738166f89a51f024ace440618cb63bed578775222091eb101fc33d5c09f",
+  "redaction": "Only developer-authored case IDs and contract fields; account, session, request identifiers and coordinates omitted.",
+  "records": [
+    {
+      "id": "T01",
+      "contract_pass": true,
+      "elapsed_ms": 5529,
+      "turns": [
+        {
+          "mode": "rules",
+          "city": "上海",
+          "execution_path": [
+            "parse_request",
+            "check_context",
+            "plan_tools",
+            "execute_tools",
+            "validate_results",
+            "generate_response"
+          ],
+          "intent": "rain",
+          "tools": [
+            {
+              "name": "get_hourly_forecast",
+              "status": "ok"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T02",
+      "contract_pass": true,
+      "elapsed_ms": 7301,
+      "turns": [
+        {
+          "mode": "rules",
+          "city": "杭州",
+          "execution_path": [
+            "parse_request",
+            "check_context",
+            "plan_tools",
+            "execute_tools",
+            "validate_results",
+            "generate_response"
+          ],
+          "intent": "hourly",
+          "tools": [
+            {
+              "name": "get_hourly_forecast",
+              "status": "ok"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T03",
+      "contract_pass": true,
+      "elapsed_ms": 6077,
+      "turns": [
+        {
+          "mode": "rules",
+          "city": "北京",
+          "execution_path": [
+            "parse_request",
+            "check_context",
+            "plan_tools",
+            "execute_tools",
+            "validate_results",
+            "generate_response"
+          ],
+          "intent": "current",
+          "tools": [
+            {
+              "name": "get_current_weather",
+              "status": "ok"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T04",
+      "contract_pass": true,
+      "elapsed_ms": 4145,
+      "turns": [
+        {
+          "mode": "rules",
+          "city": "广州",
+          "execution_path": [
+            "parse_request",
+            "check_context",
+            "plan_tools",
+            "execute_tools",
+            "validate_results",
+            "generate_response"
+          ],
+          "intent": "current",
+          "tools": [
+            {
+              "name": "get_current_weather",
+              "status": "ok"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T05",
+      "contract_pass": true,
+      "elapsed_ms": 6213,
+      "turns": [
+        {
+          "mode": "rules",
+          "city": "深圳",
+          "execution_path": [
+            "parse_request",
+            "check_context",
+            "plan_tools",
+            "execute_tools",
+            "validate_results",
+            "generate_response"
+          ],
+          "intent": "rain",
+          "tools": [
+            {
+              "name": "get_hourly_forecast",
+              "status": "ok"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T06",
+      "contract_pass": true,
+      "elapsed_ms": 3123,
+      "turns": [
+        {
+          "mode": "rules",
+          "city": "上海",
+          "execution_path": [
+            "parse_request",
+            "check_context",
+            "plan_tools",
+            "execute_tools",
+            "validate_results",
+            "generate_response"
+          ],
+          "intent": "aqi",
+          "tools": [
+            {
+              "name": "get_air_quality_forecast",
+              "status": "ok"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

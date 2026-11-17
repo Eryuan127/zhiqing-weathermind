@@ -1,0 +1,1 @@
+PASS: live homepage manually selects public Jinshan coordinate outside old box, prediction displays, regional metrics and mobile layout, no mocks and no JS errors
