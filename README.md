@@ -8,7 +8,7 @@
 
 ## 课程材料
 
-报告封面的课程教师仍待作者填写。
+课程平台提交PDF报告；源代码、模型、实验记录和演示材料通过本仓库提供。报告基于作者修订后的Word继续完善，PDF中的仓库链接可直接用于查阅。
 
 - [报告 PDF](report/028123215_阮佳惠_知晴天气决策Agent.pdf) · [可编辑 Word](report/028123215_阮佳惠_知晴天气决策Agent.docx)
 - [完整助手界面](docs/screenshots/assistant.png) · [悬浮助手界面](docs/screenshots/compact-assistant.png) · [演示步骤](docs/DEMO.md)
