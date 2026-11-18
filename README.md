@@ -8,15 +8,18 @@
 
 ## 课程材料
 
-课程平台提交PDF报告；源代码、模型、实验记录和演示材料通过本仓库提供。报告基于作者修订后的Word继续完善，PDF中的仓库链接可直接用于查阅。
+课程平台提交PDF报告；源代码、模型、实验记录和演示材料通过本仓库提供。报告采用作者2026年11月18日确认的终版Word及其19页PDF，保留作者排版；PDF中的仓库链接可直接用于查阅。
 
 - [报告 PDF](report/028123215_阮佳惠_知晴天气决策Agent.pdf) · [可编辑 Word](report/028123215_阮佳惠_知晴天气决策Agent.docx)
 - [完整助手界面](docs/screenshots/assistant.png) · [悬浮助手界面](docs/screenshots/compact-assistant.png) · [演示步骤](docs/DEMO.md)
 - [上海市域实验说明](SHANGHAI_REGIONAL_REPORT.md) · [原始指标](artifacts/hourly_regional/metrics.json) · [逐条预测 gzip](artifacts/hourly_regional/test_predictions.csv.gz)
 - [模型误差图](docs/experiments/01_测试集模型误差对比.png) · [失败案例曲线](docs/experiments/02_最大误差案例预测曲线.png)
+- [完整规则查询记录](artifacts/evaluation/20261118-rules-demonstration.json) · [输入截图](docs/screenshots/20261118-input.png) · [最终回答](docs/screenshots/20261118-answer.png) · [执行依据](docs/screenshots/20261118-execution.png)
+- [模型运行前后](docs/screenshots/author-model-result.png) · [模式说明](docs/screenshots/author-mode-explanation.png) · [账号资料](docs/screenshots/author-profile-settings.png) · [常用城市](docs/screenshots/author-saved-cities.png)
+- [Qwen输入压缩对照](docs/qwen-token-optimization.md) · [三组原始对照数据](artifacts/qwen-compaction-comparison.json)
 - [组件来源与许可](docs/THIRD_PARTY_NOTICES.md) · [技能复用记录](docs/SKILL_REUSE.md) · [复核记录](docs/VALIDATION.md)
 
-截图由作者提供，展示2026年11月17日当前版本。完整助手截图为欢迎页，小窗截图为初始摘要，不能代替完整问答的执行证据；旧版截图不作为当前界面。
+Dashboard、助手欢迎页与小窗初始摘要由作者于11月17日提供；author-*功能截图由作者于11月18日提供，来源哈希见docs/screenshots/author-features-source.json。11月18日规则模式完整运行另存输入、回答和执行依据三张原图及脱敏JSON，步骤见docs/DEMO.md。欢迎页、初始摘要与历史运行证据分开解释。
 
 ## 安装与启动
 
@@ -41,7 +44,7 @@ macOS/Linux 使用 `.venv/bin/python` 替换上面的解释器路径。
 3. 例如提问“明天下午上海会下雨吗”，核对城市、时间窗口及数据依据。
 4. 通过“更多工具 / 实验功能”运行上海下一整点气温模型。域外地点应得到明确范围提示。
 
-位置按本轮明确城市、有效会话位置和账号绑定位置处理。切换账号清理共享上下文；接口校验会话归属。小窗最多5次提问后可转完整对话。
+位置按本轮明确城市、有效会话位置和账号绑定位置处理。切换账号清理共享上下文；接口校验会话归属。小窗最多5次提问后可转完整对话。活动工具支持跑步、散步、拍照与骑行，按温度、降水概率和风速规则评分，可筛选连续时长及避雨、避强风条件；最多比较两座城市。未评估空气质量、光照或路况，评分不是机器学习预测。
 
 ## 机器学习实验与复核
 
@@ -87,7 +90,7 @@ python -m pip install -r requirements-dev.txt
 python -m pytest tests -q -ra
 ```
 
-单元测试使用明确夹具，不代表真实API成功率。`data/task_benchmark.json` 为开发者编写的回归任务集，不是独立用户研究。已上传[历史规则模式合同检查摘要](artifacts/evaluation/20261107-rules-public.json)，6例通过6例；检查范围是城市、工具及状态，不能称为用户任务完成率100%。标识符和坐标已从公开摘要排除，原始会话数据库不公开。
+单元测试使用明确夹具，不代表真实API成功率。`data/task_benchmark.json` 为开发者编写的回归任务集，不是独立用户研究。已上传[历史规则模式合同检查摘要](artifacts/evaluation/20261107-rules-public.json)，6例通过6例；检查范围是城市、工具及状态，不能称为用户任务完成率100%。标识符和坐标已从公开摘要排除，原始会话数据库不公开。[历史T01完整脱敏回答](artifacts/evaluation/20261107-T01-public.json)保留当时的17.8～19.3°C及90%降水概率；[11月18日完整演示](artifacts/evaluation/20261118-rules-demonstration.json)对应11月19日12:00—17:00的8.9～10.6°C及0%。两者查询日期不同，不能合并计算准确率。
 
 需要重新访问真实服务时显式运行：
 

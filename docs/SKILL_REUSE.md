@@ -12,6 +12,6 @@
 
 参考而未复制运行时代码：Material UI Grid、Element Plus的反馈/可控性原则、shadcn语义颜色。来源链接在 README。依赖版本见 third-party-versions.json。
 
-许可边界：安装技能正文中的第三方参考片段包含其自身许可说明，不能据此推断整份安装技能的许可证。本次不打包分发技能原文；正式报告应补充安装来源与整体许可核验，不虚构版本或授权。自写组件CSS与参考设计文档应分开列示。
+许可核验：2026年11月18日核对上游历史提交a2735a3eaf092eaaffb6dc17df25de33ef3bd048，本地技能正文经LF换行归一化后与该版本一致，整体许可证为MIT。上游当前分支内容已变化，不能用当前HEAD替代历史匹配结果。许可原文见licenses/landing-page-design-MIT.txt，匹配提交、哈希及比较说明见licenses/landing-page-design-source.json；未分发技能正文。自写CSS与仅参考的组件设计文档分别记录。
 
 尚未实施的证据：独立用户研究、视觉改造的人效收益、去除该skill后的受控消融。不能将开发者测试等同用户研究；用户研究方案见 USER_STUDY.md。

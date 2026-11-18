@@ -1,0 +1,77 @@
+{
+  "note": "Real provider; synthetic weather evidence, same three states before/after; single sample each.",
+  "results": [
+    {
+      "version": "before",
+      "question": "上海明天下午适合跑步吗",
+      "intent": "activity",
+      "expected_intent": "activity",
+      "plan_status": "ok",
+      "answer_status": "ok",
+      "input_tokens": 2897,
+      "output_tokens": 197,
+      "total_tokens": 3094,
+      "answer": "上海明天下午的气温为8.2～15.9°C，最高降水概率为25%。考虑到气温偏低且存在降水可能，跑步体验可能一般，建议谨慎安排。如果决定前往，请注意保暖并携带雨具。\n\n穿衣方面，建议外套与长裤，内搭长袖；只穿薄长袖早晚可能偏冷。运动时可根据体感适当调整，但需注意防风。\n\n评分来自活动专用天气规则，未评估空气质量、光照或路况；活动评分不是机器学习预测。"
+    },
+    {
+      "version": "after",
+      "question": "上海明天下午适合跑步吗",
+      "intent": "activity",
+      "expected_intent": "activity",
+      "plan_status": "ok",
+      "answer_status": "ok",
+      "input_tokens": 1952,
+      "output_tokens": 172,
+      "total_tokens": 2124,
+      "answer": "上海明天下午气温8.2～15.9°C，最高降水概率25%。若降水概率较低且无其他恶劣天气提示，下午时段通常适合跑步。建议穿着外套与长裤，内搭长袖；只穿薄长袖可能偏冷，可根据体感调整。\n\n评分来自活动专用天气规则，未评估空气质量、光照或路况；活动评分不是机器学习预测。"
+    },
+    {
+      "version": "before",
+      "question": "明天适合怎么穿衣服",
+      "intent": "clothing",
+      "expected_intent": "clothing",
+      "plan_status": "ok",
+      "answer_status": "ok",
+      "input_tokens": 2894,
+      "output_tokens": 179,
+      "total_tokens": 3073,
+      "answer": "明天上海气温8.2～15.9°C，建议穿着外套与长裤，内搭长袖上衣。由于只穿薄长袖在早晚时段可能偏冷，建议增加保暖内层以应对温差。最高降水概率为25%，出行时可随身携带雨具以防万一。"
+    },
+    {
+      "version": "after",
+      "question": "明天适合怎么穿衣服",
+      "intent": "clothing",
+      "expected_intent": "clothing",
+      "plan_status": "ok",
+      "answer_status": "ok",
+      "input_tokens": 1932,
+      "output_tokens": 156,
+      "total_tokens": 2088,
+      "answer": "明天上海气温8.2～15.9°C，最高降水概率25%。建议外套与长裤，内搭长袖；只穿薄长袖早晚可能偏冷。"
+    },
+    {
+      "version": "before",
+      "question": "我要是单穿一件长袖加长裤会冷吗",
+      "intent": "clothing",
+      "expected_intent": "clothing",
+      "plan_status": "ok",
+      "answer_status": "ok",
+      "input_tokens": 2908,
+      "output_tokens": 178,
+      "total_tokens": 3086,
+      "answer": "单穿一件长袖加长裤可能会冷。上海 11月9日（周一）气温 8.2～15.9°C，只穿薄长袖早晚可能偏冷。建议外套与长裤，内搭长袖，以应对较低的气温。最高降水概率 25%，出行时也可留意天气变化。"
+    },
+    {
+      "version": "after",
+      "question": "我要是单穿一件长袖加长裤会冷吗",
+      "intent": "clothing",
+      "expected_intent": "clothing",
+      "plan_status": "ok",
+      "answer_status": "ok",
+      "input_tokens": 1946,
+      "output_tokens": 187,
+      "total_tokens": 2133,
+      "answer": "根据预报，上海11月9日（周一）气温8.2～15.9°C。如果只单穿一件长袖加长裤，早晚可能会觉得偏冷。建议参考“外套与长裤，内搭长袖”的穿法，或者在长袖外增加一件外套以应对低温。"
+    }
+  ]
+}

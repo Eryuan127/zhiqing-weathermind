@@ -21,3 +21,7 @@ data/.session-secret
 artifacts/evaluation/*
 !artifacts/evaluation/20261107-rules-public.json
 .venv-*/
+
+# Reviewed, sanitized report evidence.
+!artifacts/evaluation/20261107-T01-public.json
+!artifacts/evaluation/20261118-rules-demonstration.json

@@ -12,8 +12,9 @@
 | coordTransform_py 摘用函数 | https://github.com/wandergis/coordTransform_py | MIT，完整声明见 licenses/coordtransform-MIT.txt，来源和SHA256见 licenses/coordtransform-source.json |
 | Open-Meteo / ERA5 / CAMS | https://open-meteo.com/en/licence | 数据CC BY 4.0及上游署名，缓存和页面保留来源；模式结果不是站点实测 |
 | DataV.GeoAtlas / AMAP | https://help.aliyun.com/en/datav/datav-7-0/user-guide/datav-geoatlas-widgets/ | 学习交流用途，不视为无条件开放再分发；商业或其他用途需另核验授权 |
-| BigDataCloud | https://www.bigdatacloud.com/docs/free-api/free-reverse-geocode-to-city-api | 客户端城市解析按服务条款使用 |
+| GeoNames / Open-Meteo Geocoding | https://www.geonames.org/export / https://open-meteo.com/en/docs/geocoding-api | 地名检索；CC BY及接口条款，页面保留来源 |
+| BigDataCloud | https://www.bigdatacloud.com/docs/free-api/free-reverse-geocode-to-city-api | 仅在用户授权定位后由浏览器解析当前城市，遵守客户端服务条款与公平使用政策 |
 | Qwen | https://help.aliyun.com/zh/model-studio/ | 可选外部API，额度与费用由使用者账户决定，不分发模型权重 |
-| landing-page-design 开发技能 | 见 SKILL_REUSE.md 的本机来源与哈希记录 | 仅开发指导，整体许可证未明确，不分发技能原文 |
+| landing-page-design 开发技能 a2735a3 | https://github.com/elayadesign/ai-design-skills/tree/a2735a3eaf092eaaffb6dc17df25de33ef3bd048 | MIT；仅开发指导，许可原文与来源核验见 licenses/landing-page-design-MIT.txt 和 licenses/landing-page-design-source.json；未打包技能原文 |
 
 具体依赖版本见 requirements-lock.txt。Python包的完整许可证随其发行包分发。生成式AI参与代码、调试、资料组织及报告排版，作者负责核验与解释。

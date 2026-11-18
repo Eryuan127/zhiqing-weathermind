@@ -1,0 +1,58 @@
+[
+  {
+    "file": "author-model-collapsed.png",
+    "origin": "author-provided screenshot",
+    "source_file": "1c6db883dcf39aa2c4f7cebe32c4c04c.png",
+    "sha256": "a341c3c2d0662e56d9fcd5738a8bf6d953f4223b6b0d93e08a30e27b389ecfc7",
+    "description": "model-collapsed"
+  },
+  {
+    "file": "author-model-before-run.png",
+    "origin": "author-provided screenshot",
+    "source_file": "8bb5ee65da27b2d671d567ede10c81a6.png",
+    "sha256": "8514ce333fb3adc99b8b0cbc2a86407079303319f71daea5f9274b5bd784854d",
+    "description": "model-before-run"
+  },
+  {
+    "file": "author-model-result.png",
+    "origin": "author-provided screenshot",
+    "source_file": "3b807f544629dd6d9112d9122a32df18.png",
+    "sha256": "e91d53a23c08d4f8af5f72b33264e0b50c738ec12b7721a1f27cfdedfc12b28c",
+    "description": "model-result"
+  },
+  {
+    "file": "author-account-menu.png",
+    "origin": "author-provided screenshot",
+    "source_file": "ed8c473f668bd55fba0287212d07117f.png",
+    "sha256": "9420d98d738ec11d9af63d85fc0044ee1a207ae8509a314912e8487e0d7e6e59",
+    "description": "account-menu"
+  },
+  {
+    "file": "author-profile-settings.png",
+    "origin": "author-provided screenshot",
+    "source_file": "67b5776aa8970f8bf9f6ee0807b30056.png",
+    "sha256": "8a5c0fc9730a09637f12c0107ebdccac6de2ef5c3073d2597ac9df7ed80c9d25",
+    "description": "profile-settings"
+  },
+  {
+    "file": "author-saved-cities.png",
+    "origin": "author-provided screenshot",
+    "source_file": "551266fdd6442e3e5d2038869af7af0e.png",
+    "sha256": "b363bfe9bbd1431d0de1f995afdad93e2e90b6ca781648e289e7d673c752e944",
+    "description": "saved-cities"
+  },
+  {
+    "file": "author-mode-explanation.png",
+    "origin": "author-provided screenshot",
+    "source_file": "dc980fdef943ba21c78f72c71f3dc7d8.png",
+    "sha256": "df3c75a6615fe00552369fc7973aa0d37d696cfc9f7308f6bed2a32fb20a475e",
+    "description": "mode-explanation"
+  },
+  {
+    "file": "author-mode-options.png",
+    "origin": "author-provided screenshot",
+    "source_file": "1331c4b5b05a7f75d82c6292facb7ab2.png",
+    "sha256": "d2655ece5cebb77c0fe70f4e01195ba3a174c81a409edc2599bbfc00874e3032",
+    "description": "mode-options"
+  }
+]

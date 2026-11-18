@@ -1,0 +1,46 @@
+{
+  "kind": "Historical single-case live rules execution, sanitized",
+  "source_sha256": "2b049738166f89a51f024ace440618cb63bed578775222091eb101fc33d5c09f",
+  "recorded_date": "2026-11-07",
+  "case_id": "T01",
+  "query": "明天下午上海会下雨吗",
+  "mode": "rules",
+  "city": "上海",
+  "intent": "rain",
+  "execution_path": [
+    "parse_request",
+    "check_context",
+    "plan_tools",
+    "execute_tools",
+    "validate_results",
+    "generate_response"
+  ],
+  "tools": [
+    {
+      "name": "get_hourly_forecast",
+      "status": "ok"
+    }
+  ],
+  "time_window": {
+    "timezone": "Asia/Shanghai",
+    "ranges": [
+      {
+        "start": "2026-11-08T12:00:00+08:00",
+        "end": "2026-11-08T18:00:00+08:00"
+      }
+    ],
+    "dates": [
+      "2026-11-08"
+    ],
+    "period": "下午",
+    "target_time": null,
+    "duration_hours": null,
+    "avoid_rain": false,
+    "rain_threshold": 20,
+    "avoid_wind": false,
+    "preference": "balanced"
+  },
+  "response": "**结论：上海所选时段有降雨风险，建议备伞。**\n\n关注时间段：11月8日（周日）12:00 至 11月8日（周日）17:00。\n\n关键天气依据：气温 17.8～19.3°C，最大小时降水概率 90%（11月8日（周日）17:00）。\n\n注意：降水概率不代表确定下雨；详细逐小时预报见分析依据。",
+  "contract_pass": true,
+  "redaction": "Account, session, request identifiers, coordinates and credentials omitted; public city, query, time window, tool status and full answer retained."
+}

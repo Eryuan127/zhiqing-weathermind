@@ -1,0 +1,45 @@
+{
+  "mode": "rules",
+  "mode_label": "规则模式",
+  "city": "上海",
+  "response": "**结论：上海所选时段降水概率较低，仍不能保证无雨。**\n\n关注时间段：11月19日（周四）12:00 至 11月19日（周四）17:00。\n\n关键天气依据：气温 8.9～10.6°C，最大小时降水概率 0%（11月19日（周四）12:00）。\n\n注意：降水概率不代表确定下雨；详细逐小时预报见分析依据。",
+  "tools": [
+    {
+      "name": "get_hourly_forecast",
+      "status": "ok"
+    }
+  ],
+  "time_window": {
+    "avoid_rain": false,
+    "avoid_wind": false,
+    "dates": [
+      "2026-11-19"
+    ],
+    "duration_hours": null,
+    "period": "下午",
+    "preference": "balanced",
+    "rain_threshold": 20,
+    "ranges": [
+      {
+        "end": "2026-11-19T18:00:00+08:00",
+        "start": "2026-11-19T12:00:00+08:00"
+      }
+    ],
+    "target_time": null,
+    "timezone": "Asia/Shanghai"
+  },
+  "checked_at": "2026-11-18T13:44:20.285063+08:00",
+  "http_status": 200,
+  "query": "明天下午上海会下雨吗",
+  "mocked": false,
+  "entry": "python run_weather.py --port 5083",
+  "code_baseline": "5c9f12a9b3fb2be690ee89bc538d9edfaf9c5901",
+  "execution_path": [
+    "parse_request",
+    "check_context",
+    "plan_tools",
+    "execute_tools",
+    "validate_results",
+    "generate_response"
+  ]
+}

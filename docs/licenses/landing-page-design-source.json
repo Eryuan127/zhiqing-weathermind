@@ -1,0 +1,22 @@
+{
+  "repository": "https://github.com/elayadesign/ai-design-skills",
+  "verified_commit": "456d9e0d3e2d84c748bb143c6ca3d90c45e16213",
+  "local_sha256": "203569792660ab6d71dcb2e4fa673c0c7a0df7c99801d04ab419a4cb08aceb2c",
+  "upstream_sha256": "0c0ad9323121c0cc4f52b637f64a3a446016f065ae9ebf012dab210559f03d5f",
+  "exact_match": false,
+  "normalized_match": false,
+  "license_checks": {
+    "LICENSE": 200,
+    "LICENSE.md": 404,
+    "LICENSE.txt": 404
+  },
+  "source_url": "https://github.com/elayadesign/ai-design-skills/blob/a2735a3eaf092eaaffb6dc17df25de33ef3bd048/skills/landing-page-design/SKILL.md",
+  "matching_source_commits": [
+    "a2735a3eaf092eaaffb6dc17df25de33ef3bd048"
+  ],
+  "license": "MIT",
+  "exact_source_commit": "a2735a3eaf092eaaffb6dc17df25de33ef3bd048",
+  "license_url": "https://github.com/elayadesign/ai-design-skills/blob/a2735a3eaf092eaaffb6dc17df25de33ef3bd048/LICENSE",
+  "recorded_source_content_matches_local": true,
+  "comparison_note": "The current upstream head differs; the historical source commit a2735a3 matches the local file after LF normalization."
+}
